@@ -1,1 +1,34 @@
 
+// Student class definition
+public class Student {
+    
+    // Instance variable stored in Heap memory
+    int age;
+
+    // Method to display values
+    public void display() {
+        // Local variable stored in Stack memory
+        int marks = 85;
+        
+        System.out.println("Instance Variable (age): " + age);
+        System.out.println("Local Variable (marks): " + marks);
+    }
+
+    // Main method where execution starts
+    public static void main(String[] args) {
+        
+        // Creating student object in Heap memory
+        Student s = new Student();
+        
+        // Setting the age variable
+        s.age = 20;
+
+        System.out.println("Student Object Created");
+        
+        // Printing unique identity hash code of the object
+        System.out.println("Object Identity Hash Code: " + System.identityHashCode(s));
+        
+        // Calling display method
+        s.display();
+    }
+}
